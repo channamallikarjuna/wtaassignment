@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head></head>
+<link rel="stylesheet" type="css/text" href="/style.css">
+<style type="text/css">
+	html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+form {
+  margin: auto;
+  width: 60%;
+  
+  padding: 40px;
+  top: 50%;
+    
+    
+    
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  
+}
+
+  #box
+{
+	font-size: 14pt;
+    height: 38px;
+    width : 250px;
+    color: white;
+    /*color: rgb(32%,0%,0%);
+    background-color:rgb(240,240,240);
+    border-color: rgb(0,0,0);*/
+    background: transparent;
+    border:none;
+    border-bottom: 1px solid white;
+}
+::placeholder
+{
+	color: white;
+}
+table,td,th
+{
+  border:1px solid black;
+  text-align: center;
+  padding: 30px;
+  background-color:#9fd4ff;
+}
+th{
+    color: #ffffff;
+    background-color: #0000ff;
+}
+
+</style>
+
+<script>
+	
+
+
+var myApp = angular.module('myform', []);
+myApp.controller('rating', ['$scope', function($scope) {
+    $scope.rate = '0';
+
+    $scope.star = function(x) {
+        $scope.rate = x;
+        
+        if(x>0 && x<10)
+        {
+        	$scope.quality=x%10;
+      if(x==1)
+      {
+    
+        $scope.myobj1={"color": "orange"};
+        $scope.myobj2={"color": "grey"};
+        $scope.myobj3={"color": "grey"};
+        $scope.myobj4={"color": "grey"};
+        $scope.myobj5={"color": "grey"};
+    }
+    if(x==2)
+      {
+    
+       $scope.myobj1={"color": "orange"};
+        $scope.myobj2={"color": "orange"};
+        $scope.myobj3={"color": "grey"};
+        $scope.myobj4={"color": "grey"};
+        $scope.myobj5={"color": "grey"};
+    }
+    if(x==3)
+      {
+    
+        $scope.myobj1={"color": "orange"};
+        $scope.myobj2={"color": "orange"};
+        $scope.myobj3={"color": "orange"};
+        $scope.myobj4={"color": "grey"};
+        $scope.myobj5={"color": "grey"};
+    }
+    if(x==4)
+      {
+    
+        $scope.myobj1={"color": "orange"};
+        $scope.myobj2={"color": "orange"};
+        $scope.myobj3={"color": "orange"};
+        $scope.myobj4={"color": "orange"};
+        $scope.myobj5={"color": "grey"};
+    }
+    if(x==5)
+      {
+    
+        $scope.myobj1={"color": "orange"};
+        $scope.myobj2={"color": "orange"};
+        $scope.myobj3={"color": "orange"};
+        $scope.myobj4={"color": "orange"};
+        $scope.myobj5={"color": "orange"};
+    }
+}
+
+
+if(x>10 && x<20)
+        {
+        	$scope.quantity=x%10;
+        	
+      if(x==11)
+      {
+    
+        $scope.myobj11={"color": "orange"};
+        $scope.myobj12={"color": "grey"};
+        $scope.myobj13={"color": "grey"};
+        $scope.myobj14={"color": "grey"};
+        $scope.myobj15={"color": "grey"};
+    }
+    if(x==12)
+      {
+    
+       $scope.myobj11={"color": "orange"};
+        $scope.myobj12={"color": "orange"};
+        $scope.myobj13={"color": "grey"};
+        $scope.myobj14={"color": "grey"};
+        $scope.myobj15={"color": "grey"};
+    }
+    if(x==13)
+      {
+    
+        $scope.myobj11={"color": "orange"};
+        $scope.myobj12={"color": "orange"};
+        $scope.myobj13={"color": "orange"};
+        $scope.myobj14={"color": "grey"};
+        $scope.myobj15={"color": "grey"};
+    }
+    if(x==14)
+      {
+    
+        $scope.myobj11={"color": "orange"};
+        $scope.myobj12={"color": "orange"};
+        $scope.myobj13={"color": "orange"};
+        $scope.myobj14={"color": "orange"};
+        $scope.myobj15={"color": "grey"};
+    }
+    if(x==15)
+      {
+    
+        $scope.myobj11={"color": "orange"};
+        $scope.myobj12={"color": "orange"};
+        $scope.myobj13={"color": "orange"};
+        $scope.myobj14={"color": "orange"};
+        $scope.myobj15={"color": "orange"};
+    }
+}
+
+
+if(x>20 && x<30)
+        {
+        	$scope.dependability=x%10;
+        	
+      if(x==21)
+      {
+    
+        $scope.myobj21={"color": "orange"};
+        $scope.myobj22={"color": "grey"};
+        $scope.myobj23={"color": "grey"};
+        $scope.myobj24={"color": "grey"};
+        $scope.myobj25={"color": "grey"};
+    }
+    if(x==22)
+      {
+    
+       $scope.myobj21={"color": "orange"};
+        $scope.myobj22={"color": "orange"};
+        $scope.myobj23={"color": "grey"};
+        $scope.myobj24={"color": "grey"};
+        $scope.myobj25={"color": "grey"};
+    }
+    if(x==23)
+      {
+    
+        $scope.myobj21={"color": "orange"};
+        $scope.myobj22={"color": "orange"};
+        $scope.myobj23={"color": "orange"};
+        $scope.myobj24={"color": "grey"};
+        $scope.myobj25={"color": "grey"};
+    }
+    if(x==24)
+      {
+    
+        $scope.myobj21={"color": "orange"};
+        $scope.myobj22={"color": "orange"};
+        $scope.myobj23={"color": "orange"};
+        $scope.myobj24={"color": "orange"};
+        $scope.myobj25={"color": "grey"};
+    }
+    if(x==25)
+      {
+    
+        $scope.myobj21={"color": "orange"};
+        $scope.myobj22={"color": "orange"};
+        $scope.myobj23={"color": "orange"};
+        $scope.myobj24={"color": "orange"};
+        $scope.myobj25={"color": "orange"};
+    }
+}
+
+
+if(x>30 && x<40)
+        {
+        	$scope.punctuality=x%10;
+        	
+      if(x==31)
+      {
+    
+        $scope.myobj31={"color": "orange"};
+        $scope.myobj32={"color": "grey"};
+        $scope.myobj33={"color": "grey"};
+        $scope.myobj34={"color": "grey"};
+        $scope.myobj35={"color": "grey"};
+    }
+    if(x==32)
+      {
+    
+       $scope.myobj31={"color": "orange"};
+        $scope.myobj32={"color": "orange"};
+        $scope.myobj33={"color": "grey"};
+        $scope.myobj34={"color": "grey"};
+        $scope.myobj35={"color": "grey"};
+    }
+    if(x==33)
+      {
+    
+        $scope.myobj31={"color": "orange"};
+        $scope.myobj32={"color": "orange"};
+        $scope.myobj33={"color": "orange"};
+        $scope.myobj34={"color": "grey"};
+        $scope.myobj35={"color": "grey"};
+    }
+    if(x==34)
+      {
+    
+        $scope.myobj31={"color": "orange"};
+        $scope.myobj32={"color": "orange"};
+        $scope.myobj33={"color": "orange"};
+        $scope.myobj34={"color": "orange"};
+        $scope.myobj35={"color": "grey"};
+    }
+    if(x==35)
+      {
+    
+        $scope.myobj31={"color": "orange"};
+        $scope.myobj32={"color": "orange"};
+        $scope.myobj33={"color": "orange"};
+        $scope.myobj34={"color": "orange"};
+        $scope.myobj35={"color": "orange"};
+    }
+}
+
+
+if(x>40 && x<50)
+        {
+        	$scope.communication=x%10;
+      if(x==41)
+      {
+    
+        $scope.myobj41={"color": "orange"};
+        $scope.myobj42={"color": "grey"};
+        $scope.myobj43={"color": "grey"};
+        $scope.myobj44={"color": "grey"};
+        $scope.myobj45={"color": "grey"};
+    }
+    if(x==42)
+      {
+    
+       $scope.myobj41={"color": "orange"};
+        $scope.myobj42={"color": "orange"};
+        $scope.myobj43={"color": "grey"};
+        $scope.myobj44={"color": "grey"};
+        $scope.myobj45={"color": "grey"};
+    }
+    if(x==43)
+      {
+    
+        $scope.myobj41={"color": "orange"};
+        $scope.myobj42={"color": "orange"};
+        $scope.myobj43={"color": "orange"};
+        $scope.myobj44={"color": "grey"};
+        $scope.myobj45={"color": "grey"};
+    }
+    if(x==44)
+      {
+    
+        $scope.myobj41={"color": "orange"};
+        $scope.myobj42={"color": "orange"};
+        $scope.myobj43={"color": "orange"};
+        $scope.myobj44={"color": "orange"};
+        $scope.myobj45={"color": "grey"};
+    }
+    if(x==45)
+      {
+    
+        $scope.myobj41={"color": "orange"};
+        $scope.myobj42={"color": "orange"};
+        $scope.myobj43={"color": "orange"};
+        $scope.myobj44={"color": "orange"};
+        $scope.myobj45={"color": "orange"};
+    }
+}
+if(x>50 && x<60)
+        {
+        	$scope.problemsolving=x%10;
+      if(x==51)
+      {
+    
+        $scope.myobj51={"color": "orange"};
+        $scope.myobj52={"color": "grey"};
+        $scope.myobj53={"color": "grey"};
+        $scope.myobj54={"color": "grey"};
+        $scope.myobj55={"color": "grey"};
+    }
+    if(x==52)
+      {
+    
+       $scope.myobj51={"color": "orange"};
+        $scope.myobj52={"color": "orange"};
+        $scope.myobj53={"color": "grey"};
+        $scope.myobj54={"color": "grey"};
+        $scope.myobj55={"color": "grey"};
+    }
+    if(x==53)
+      {
+    
+        $scope.myobj51={"color": "orange"};
+        $scope.myobj52={"color": "orange"};
+        $scope.myobj53={"color": "orange"};
+        $scope.myobj54={"color": "grey"};
+        $scope.myobj55={"color": "grey"};
+    }
+    if(x==54)
+      {
+    
+        $scope.myobj51={"color": "orange"};
+        $scope.myobj52={"color": "orange"};
+        $scope.myobj53={"color": "orange"};
+        $scope.myobj54={"color": "orange"};
+        $scope.myobj55={"color": "grey"};
+    }
+    if(x==55)
+      {
+    
+        $scope.myobj51={"color": "orange"};
+        $scope.myobj52={"color": "orange"};
+        $scope.myobj53={"color": "orange"};
+        $scope.myobj54={"color": "orange"};
+        $scope.myobj55={"color": "orange"};
+    }
+}
+
+
+if(x>60 && x<70)
+        {
+        	$scope.team=x%10;
+      if(x==61)
+      {
+    
+        $scope.myobj61={"color": "orange"};
+        $scope.myobj62={"color": "grey"};
+        $scope.myobj63={"color": "grey"};
+        $scope.myobj64={"color": "grey"};
+        $scope.myobj65={"color": "grey"};
+    }
+    if(x==62)
+      {
+    
+       $scope.myobj61={"color": "orange"};
+        $scope.myobj62={"color": "orange"};
+        $scope.myobj63={"color": "grey"};
+        $scope.myobj64={"color": "grey"};
+        $scope.myobj65={"color": "grey"};
+    }
+    if(x==63)
+      {
+    
+        $scope.myobj61={"color": "orange"};
+        $scope.myobj62={"color": "orange"};
+        $scope.myobj63={"color": "orange"};
+        $scope.myobj64={"color": "grey"};
+        $scope.myobj65={"color": "grey"};
+    }
+    if(x==64)
+      {
+    
+        $scope.myobj61={"color": "orange"};
+        $scope.myobj62={"color": "orange"};
+        $scope.myobj63={"color": "orange"};
+        $scope.myobj64={"color": "orange"};
+        $scope.myobj65={"color": "grey"};
+    }
+    if(x==5)
+      {
+    
+        $scope.myobj61={"color": "orange"};
+        $scope.myobj62={"color": "orange"};
+        $scope.myobj63={"color": "orange"};
+        $scope.myobj64={"color": "orange"};
+        $scope.myobj65={"color": "orange"};
+    }
+}
+
+
+
+    
+    
+    };
+
+    
+}]);
+	</script>
+	<script type="text/javascript">
+		function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  
+}
+	</script>
+
+<body >
+	<div id='Page1' >
+
+	<div>
+		<a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+		
+		
+<form action="insert" method="post">
+
+	<h1 align="center" style="color: white ;text-align: center;">EMPLOYEE APPRAISAL FORM</h1>
+	<a href="#" onclick="return show('Page2','Page1');">see reviews</a>
+<div ng-app="myform" align="center">
+  <input type="employeename" name="employeename" placeholder="EMPLOYEE Name" id="box"><h1>   </h1>
+  <input type="employeeid" name="employeeid" placeholder="EMPLOYEE Id" id="box"><h1>   </h1>
+  <input type="field" name="field" placeholder="Field" id="box">
+  
+  
+  <div ng-controller="rating">
+  	<input type="hidden" name="quality" ng-value="quality">
+  	<input type="hidden" name="quantity" ng-value="quantity">
+  	<input type="hidden" name="dependability" ng-value="dependability">
+  	<input type="hidden" name="punctuality" ng-value="punctuality">
+  	<input type="hidden" name="communication" ng-value="communication">
+  	<input type="hidden" name="problemsolving" ng-value="problemsolving">
+  <input type="hidden" name="team" ng-value="team">
+ 	<br>
+ 	<br>
+ 	<h1>GIVE THE HONEST RATINGS</h1>
+<table border="1" align="center" id="myTable">
+        <tr>
+            <th>FACTOR</th>
+            <th>starS</th>
+            
+
+        </tr>
+        
+    <tr >
+      <td>Quality of work</td>
+     <td><span ng-style="myobj1"  class="fa fa-star " ng-click="star(1)" style="color: grey"></span>
+<span ng-style="myobj2" class="fa fa-star" ng-click="star(2)" style="color: grey"></span>
+<span ng-style="myobj3" class="fa fa-star " ng-click="star(3)" style="color: grey"></span>
+<span ng-style="myobj4" class="fa fa-star" ng-click="star(4)" style="color: grey"></span>
+<span ng-style="myobj5" class="fa fa-star" ng-click="star(5)" style="color: grey"></span></td>
+
+    </tr>
+    <tr >
+      <td>Quantity of work</td>
+     <td><span ng-style="myobj11"  class="fa fa-star " ng-click="star(11)" style="color: grey"></span>
+<span ng-style="myobj12" class="fa fa-star" ng-click="star(12)" style="color: grey"></span>
+<span ng-style="myobj13" class="fa fa-star " ng-click="star(13)" style="color: grey"></span>
+<span ng-style="myobj14" class="fa fa-star" ng-click="star(14)" style="color: grey"></span>
+<span ng-style="myobj15" class="fa fa-star" ng-click="star(15)" style="color: grey"></span></td>
+
+    </tr>
+    <tr >
+      <td>Dependability</td>
+     <td><span ng-style="myobj21"  class="fa fa-star " ng-click="star(21)" style="color: grey"></span>
+<span ng-style="myobj22" class="fa fa-star" ng-click="star(22)" style="color: grey"></span>
+<span ng-style="myobj23" class="fa fa-star " ng-click="star(23)" style="color: grey"></span>
+<span ng-style="myobj24" class="fa fa-star" ng-click="star(24)" style="color: grey"></span>
+<span ng-style="myobj25" class="fa fa-star" ng-click="star(25)" style="color: grey"></span></td>
+    </tr>
+    <tr >
+      <td>Punctuality</td>
+     <td><span ng-style="myobj31"  class="fa fa-star " ng-click="star(31)" style="color: grey"></span>
+<span ng-style="myobj32" class="fa fa-star" ng-click="star(32)" style="color: grey"></span>
+<span ng-style="myobj33" class="fa fa-star " ng-click="star(33)" style="color: grey"></span>
+<span ng-style="myobj34" class="fa fa-star" ng-click="star(34)" style="color: grey"></span>
+<span ng-style="myobj35" class="fa fa-star" ng-click="star(35)" style="color: grey"></span></td>
+    </tr>
+    <tr >
+      <td>Communication skills</td>
+     <td><span ng-style="myobj41"  class="fa fa-star " ng-click="star(41)" style="color: grey"></span>
+<span ng-style="myobj42" class="fa fa-star" ng-click="star(42)" style="color: grey"></span>
+<span ng-style="myobj43" class="fa fa-star " ng-click="star(43)" style="color: grey"></span>
+<span ng-style="myobj44" class="fa fa-star" ng-click="star(44)" style="color: grey"></span>
+<span ng-style="myobj45" class="fa fa-star" ng-click="star(45)" style="color: grey"></span></td>
+    </tr>
+    <tr >
+      <td>Problem-solving skills</td>
+     <td><span ng-style="myobj51"  class="fa fa-star " ng-click="star(51)" style="color: grey"></span>
+<span ng-style="myobj52" class="fa fa-star" ng-click="star(52)" style="color: grey"></span>
+<span ng-style="myobj53" class="fa fa-star " ng-click="star(53)" style="color: grey"></span>
+<span ng-style="myobj54" class="fa fa-star" ng-click="star(54)" style="color: grey"></span>
+<span ng-style="myobj55" class="fa fa-star" ng-click="star(55)" style="color: grey"></span></td>
+    </tr>
+    <tr >
+      <td>Ability to work as part of a team</td>
+     <td><span ng-style="myobj61"  class="fa fa-star " ng-click="star(61)" style="color: grey"></span>
+<span ng-style="myobj62" class="fa fa-star" ng-click="star(62)" style="color: grey"></span>
+<span ng-style="myobj63" class="fa fa-star " ng-click="star(63)" style="color: grey"></span>
+<span ng-style="myobj64" class="fa fa-star" ng-click="star(64)" style="color: grey"></span>
+<span ng-style="myobj65" class="fa fa-star" ng-click="star(65)" style="color: grey"></span></td>
+    </tr>
+    
+        
+    </table>
+    <input type="reviewername" name="reviewername" placeholder="REVIEWER Name" id="box"><h1>   </h1>
+  <input type="reviewerid" name="reviwerid" placeholder="REVIEWER Id" id="box"><h1>   </h1>
+<input type="submit" name="submit">
+<br>
+ <span ng-style="myobj1"  class="fa fa-star " ng-click="star(1)" style="color: grey"></span>
+<span ng-style="myobj2" class="fa fa-star" ng-click="star(2)" style="color: grey"></span>
+<span ng-style="myobj3" class="fa fa-star " ng-click="star(3)" style="color: grey"></span>
+<span ng-style="myobj4" class="fa fa-star" ng-click="star(4)" style="color: grey"></span>
+<span ng-style="myobj5" class="fa fa-star" ng-click="star(5)" style="color: grey"></span>
+ 	
+</div>
+</div>
+</form>
+<div>
+</div>
+</div>
+</div>
+
+<div id='Page2' style="display:none">
+	<div align="center">
+		<a href="#" onclick="return show('Page1','Page2');">Show page 2</a>
+		<form method="post" action="search">
+			<h1 style="color: white"> search employee</h1>
+			<input type="employeeid" name="employeeid" placeholder="employee id">
+			<input type="submit" name="submit">
+		</form>
+		<form method="post" action="delete">
+			<h1 style="color: white">delete employee</h1>
+			<input type="employeeid" name="employeeid" placeholder="employee id">
+			<input type="submit" name="submit">
+		</form>
+		
+			<h1>UPDATE Employee</h1>
+			<p style="background-color: white"><a href="#" onclick="return show('Page1','Page2');">UPDATE</a></p>
+			
+		</form>
+
+
+
+</div>
+	</div>
+</body>
+</html>
